@@ -5,7 +5,12 @@ const RootLayout = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <Outlet></Outlet>
+      <div
+        className="container mx-auto px-4
+      "
+      >
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };

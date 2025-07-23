@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const navBar = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       {" "}
