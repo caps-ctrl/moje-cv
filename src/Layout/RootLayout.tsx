@@ -11,6 +11,9 @@ const RootLayout = () => {
       >
         <Outlet></Outlet>
       </div>
+      <footer className="text-center p-4 bg-gray-200 mt-4">
+        <p>&copy; {new Date().getFullYear()} Marcel. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

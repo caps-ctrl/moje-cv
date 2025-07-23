@@ -54,7 +54,7 @@ const WritingText = () => {
   );
 
   return (
-    <div>
+    <div className="text-green-500 text-3xl font-mono whitespace-pre-wrap bg-gray-800 p-4 rounded-lg shadow-lg">
       {displayed}
       <span style={{ borderRight: "2px solid" }}>&nbsp;</span>
     </div>
