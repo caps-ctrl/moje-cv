@@ -10,7 +10,7 @@ const Home = () => {
       <div className="flex justify-evenly items-center p-4 border-gray-400">
         <div className="w-[50%] flex flex-col text-left  gap-y-6 text-2xl  font-['fira sanss'] font-bold text-gray-800 border-r-2  ">
           <h2></h2>
-          <div className="flex flex-col gap-y-4 p-4">
+          <div className="flex flex-col gap-y-4 p-4 dark:text-gray-100">
             <p>
               Jestem Marcel — junior React developer z głową pełną pomysłów 💡 i
               kodem gotowym do działania . Uwielbiam tworzyć nowoczesne

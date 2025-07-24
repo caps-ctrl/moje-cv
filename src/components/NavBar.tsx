@@ -1,18 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-const navBar = () => {
-  const navigate = useNavigate();
 
+import ThemeSwitcher from "./ThemeSwitcher";
+const navBar = () => {
   return (
     <div>
       {" "}
       <div className="flex justify-between items-center p-4  ">
-        <div></div>
+        <div>
+          {" "}
+          <ThemeSwitcher></ThemeSwitcher>
+        </div>
         <div>
           <ul
-            className="flex space-x-4  p-4 rounded-4xl  "
-            style={{ boxShadow: "0 0px 10px rgba(0, 0, 0, 0.2)" }}
+            className="flex space-x-4  p-4 rounded-4xl shadow-[0_0px_10px_rgba(0,0,0,1)] dark:shadow-[0_0px_10px_rgba(0,0,0,1)] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+            // style={{ boxShadow: "0 0px 10px rgba(0, 0, 0, 0.2)", }}
           >
             <NavLink to={"/"}>
               {" "}
@@ -40,7 +42,7 @@ const navBar = () => {
             </NavLink>
           </ul>
         </div>
-        <div></div>
+        <div>dwad</div>
       </div>
     </div>
   );

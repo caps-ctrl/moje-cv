@@ -1,12 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-  useRoutes,
-} from "react-router-dom";
+import { BrowserRouter, useLocation, useRoutes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
