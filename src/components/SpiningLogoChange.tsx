@@ -22,7 +22,7 @@ const SpiningLogoChange = () => {
   const [ischanged, setIsChanged] = useState(false);
 
   useEffect(() => {
-    const pause = 5000; // czas pauzy przed zmianą ikony
+    const pause = 5000;
     const SpiningLogoHandle = () => {
       setRotating(true);
       const timeout2 = setTimeout(() => {

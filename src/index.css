@@ -3,6 +3,3 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 
-#active {
- color:"rgb(232, 255, 255)";
-}
