@@ -88,7 +88,7 @@ function AnimatedRoutes() {
   );
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait">
       <React.Fragment key={location.pathname}>{element}</React.Fragment>
     </AnimatePresence>
   );

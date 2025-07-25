@@ -1,4 +1,3 @@
-import { th } from "framer-motion/client";
 import { useEffect, useState } from "react";
 
 export type Theme = "dark" | "system" | "light";
@@ -15,7 +14,7 @@ export function useTheme() {
         theme === "dark" ||
         (theme === "system" &&
           window.matchMedia("(prefers-color-scheme: dark)").matches);
-
+      localStorage.setItem("theme", theme);
       document.documentElement.classList.toggle("dark", isDark);
     };
 
@@ -40,5 +39,5 @@ export function useTheme() {
     setTheme(newTheme);
   };
 
-  return { theme, setTheme };
+  return { theme, setTheme, changeTheme };
 }
