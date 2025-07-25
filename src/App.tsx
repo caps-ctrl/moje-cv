@@ -1,13 +1,13 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrowserRouter, useLocation, useRoutes } from "react-router-dom";
-import Home from "./pages/Home";
-import AboutMe from "./pages/AboutMe";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import RootLayout from "./Layout/RootLayout";
-import NotFound from "./components/NotFound";
+const Home = React.lazy(() => import("./pages/Home"));
+const AboutMe = React.lazy(() => import("./pages/AboutMe"));
+const Skills = React.lazy(() => import("./pages/Skills"));
+const Projects = React.lazy(() => import("./pages/Projects"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const RootLayout = React.lazy(() => import("./Layout/RootLayout"));
+const NotFound = React.lazy(() => import("./components/NotFound"));
 
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -88,7 +88,7 @@ function AnimatedRoutes() {
   );
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <React.Fragment key={location.pathname}>{element}</React.Fragment>
     </AnimatePresence>
   );

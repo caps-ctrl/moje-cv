@@ -42,7 +42,7 @@ const navBar = () => {
             </NavLink>
           </ul>
         </div>
-        <div>dwad</div>
+        <div></div>
       </div>
     </div>
   );
