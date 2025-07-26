@@ -1,7 +1,7 @@
-import React from "react";
 import SpiningLogoChange from "../components/SpiningLogoChange";
-
+import { useWidth } from "../components/useWidth";
 const AboutMe = () => {
+  const [width, setWidth] = useWidth();
   return (
     <div>
       <h1 className="text-3xl font-bold flex justify-center items-center">
@@ -67,7 +67,13 @@ const AboutMe = () => {
               </ol>
             </div>
           </div>
-          <div className="w-[40%] flex justify-center items-center">
+          <div
+            className={
+              width < 768
+                ? "hidden"
+                : "w-[40%] flex justify-center items-center"
+            }
+          >
             <SpiningLogoChange></SpiningLogoChange>
           </div>
         </div>

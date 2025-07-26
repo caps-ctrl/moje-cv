@@ -1,22 +1,17 @@
-import { useEffect } from "react";
-import WritingText from "../components/WritingText";
 import { useWidth } from "../components/useWidth";
-const Home = () => {
-  const [width, setWidth] = useWidth();
-
+const MobileHome = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center p-8  ">
-        Cześć! Jestem Marcel. Tworze nowoczesne aplikacje webowe w React i
-        TypeScript.
+      <h1 className="text-3xl font-bold text-center p-4 ">
+        Jestem Marcel. Tworze nowoczesne aplikacje webowe
       </h1>
-      <div className={"flex justify-evenly items-center p-4 border-gray-400"}>
+      <div className={"flex justify-evenly items-center  border-gray-400"}>
         <div
           className={
-            "w-[50%] flex flex-col text-left  gap-y-6 text-2xl  font-['fira sanss'] font-bold text-gray-800 border-r-2  "
+            "w-[80%] flex flex-col text-center  gap-y-6 text-xl  font-['fira sanss'] font-bold text-gray-800  "
           }
         >
-          <div className={"flex flex-col gap-y-4 p-4 dark:text-gray-100"}>
+          <div className={"flex flex-col gap-y-4  dark:text-gray-100"}>
             <p>
               Jestem Marcel — junior React developer z głową pełną pomysłów 💡 i
               kodem gotowym do działania . Uwielbiam tworzyć nowoczesne
@@ -31,11 +26,6 @@ const Home = () => {
               Chcesz zobaczyć, co potrafię? 👀 Zerknij na moje projekty albo po
               prostu napisz — chętnie pogadamy! ☕
             </p>
-          </div>
-        </div>
-        <div className={"w-[50%] flex justify-center items-center p-4 "}>
-          <div>
-            <WritingText></WritingText>
           </div>
         </div>
       </div>
@@ -73,4 +63,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MobileHome;

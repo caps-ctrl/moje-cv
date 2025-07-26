@@ -8,6 +8,8 @@ const Projects = React.lazy(() => import("./pages/Projects"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const RootLayout = React.lazy(() => import("./Layout/RootLayout"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
+const MobileHome = React.lazy(() => import("./pages/MobileHome"));
+import { useWidth } from "./components/useWidth";
 
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -26,7 +28,7 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
 
 function AnimatedRoutes() {
   const location = useLocation();
-
+  const [width, setWidth] = useWidth();
   const element = useRoutes(
     [
       {
@@ -37,7 +39,7 @@ function AnimatedRoutes() {
             index: true,
             element: (
               <PageWrapper>
-                <Home />
+                {width < 768 ? <MobileHome></MobileHome> : <Home />}
               </PageWrapper>
             ),
           },

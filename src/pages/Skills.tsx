@@ -1,4 +1,3 @@
-import React from "react";
 import { FaReact, FaGithub, FaMobileAlt } from "react-icons/fa";
 import { SiRedux, SiTypescript, SiReactrouter } from "react-icons/si";
 import { motion } from "framer-motion";

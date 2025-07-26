@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 const projects = [
   {
@@ -26,7 +25,7 @@ const projects = [
 const Projects = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold flex justify-center items-center">
+      <h1 className="text-2xl font-bold flex justify-center items-center p-4">
         Projects
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  p-4">
@@ -34,7 +33,7 @@ const Projects = () => {
           return (
             <motion.div
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.4,
                 delay: index * 0.2,

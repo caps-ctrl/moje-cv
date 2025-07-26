@@ -4,5 +4,5 @@
 
 
 .active {
-    @apply  dark:text-blue-500 text-red-700 font-bold;
+    @apply  dark:text-blue-500 text-red-700 ;
 }
