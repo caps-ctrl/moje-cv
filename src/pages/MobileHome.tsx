@@ -1,4 +1,3 @@
-import { useWidth } from "../components/useWidth";
 const MobileHome = () => {
   return (
     <div>

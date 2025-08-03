@@ -1,12 +1,9 @@
-import { useEffect } from "react";
 import WritingText from "../components/WritingText";
-import { useWidth } from "../components/useWidth";
-const Home = () => {
-  const [width, setWidth] = useWidth();
 
+const Home = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center p-8  ">
+      <h1 className="text-5xl font-bold text-center p-10  ">
         Cześć! Jestem Marcel. Tworze nowoczesne aplikacje webowe w React i
         TypeScript.
       </h1>

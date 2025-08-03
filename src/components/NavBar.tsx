@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useWidth } from "./useWidth";
 import ThemeSwitcher from "./ThemeSwitcher";
-const navBar = () => {
-  const [width, setWidth] = useWidth();
+const NavBar = () => {
+  const [width] = useWidth();
   return (
     <div>
       {" "}
@@ -16,30 +16,23 @@ const navBar = () => {
             className="flex space-x-4  p-4 rounded-4xl shadow-[0_0px_10px_rgba(0,0,0,1)] dark:shadow-[0_0px_10px_rgba(0,0,0,1)] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100"
             // style={{ boxShadow: "0 0px 10px rgba(0, 0, 0, 0.2)", }}
           >
-            <NavLink to={"/"}>
+            {" "}
+            <li>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>{" "}
+            <li>
+              <NavLink to={"/Projects"}>Projects </NavLink>
+            </li>{" "}
+            <li>
+              <NavLink to={"/AboutMe"}>About me </NavLink>
+            </li>{" "}
+            <li>
               {" "}
-              <li>Home</li>
-            </NavLink>
-
-            <NavLink to={"/Projects"}>
-              {" "}
-              <li>Projects</li>
-            </NavLink>
-
-            <NavLink to={"/AboutMe"}>
-              {" "}
-              <li>About me</li>
-            </NavLink>
-
-            <NavLink to={"/Skills"}>
-              {" "}
-              <li>Skills</li>
-            </NavLink>
-
-            <NavLink to={"/Contact"}>
-              {" "}
-              <li>Contact</li>
-            </NavLink>
+              <NavLink to={"/Skills"}>Skills</NavLink>
+            </li>{" "}
+            <li>
+              <NavLink to={"/Contact"}>Contact </NavLink>
+            </li>
           </ul>
         </div>
         <div></div>
@@ -48,4 +41,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;

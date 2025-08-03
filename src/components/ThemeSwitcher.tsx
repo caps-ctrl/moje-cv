@@ -5,7 +5,7 @@ import { AlignJustify } from "lucide-react";
 
 export function ThemeSwitcher() {
   const [opened, setOpened] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   return (
     <motion.button
       initial={{ width: "25px", height: "26px" }}

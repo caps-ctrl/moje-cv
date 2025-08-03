@@ -1,7 +1,7 @@
 import SpiningLogoChange from "../components/SpiningLogoChange";
 import { useWidth } from "../components/useWidth";
 const AboutMe = () => {
-  const [width, setWidth] = useWidth();
+  const [width] = useWidth();
   return (
     <div>
       <h1 className="text-3xl font-bold flex justify-center items-center">

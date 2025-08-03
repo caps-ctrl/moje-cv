@@ -42,11 +42,10 @@ const Skills = () => {
             dbam o to, aby moje aplikacje działały dobrze na każdej wielkości
             ekranu.
           </p>
-          <li className="font-bold text-2xl ">React and Redux</li>
+          <li className="font-bold text-2xl ">React </li>
           <p className="mb-5">
             moja główna biblioteka do tworzenia aplikacji frontendowych. Znam
-            JSX, komponenty funkcyjne, propsy, hooki oraz podstawy zarządzania
-            stanem.
+            JSX, komponenty funkcyjne, propsy, hooki.
           </p>
           <li className="font-bold text-2xl ">TypeScript </li>
           <p className="mb-5">
