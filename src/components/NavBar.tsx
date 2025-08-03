@@ -1,13 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { useWidth } from "./useWidth";
+
 import ThemeSwitcher from "./ThemeSwitcher";
 const NavBar = () => {
-  const [width] = useWidth();
   return (
     <div>
       {" "}
       <div className="flex justify-between items-center p-4  ">
-        <div className={width < 768 ? "hidden" : ""}>
+        <div className=" hidden md:flex">
           {" "}
           <ThemeSwitcher></ThemeSwitcher>
         </div>

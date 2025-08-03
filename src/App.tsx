@@ -28,7 +28,7 @@ function PageWrapper({ children }: { children: React.ReactNode }) {
 
 function AnimatedRoutes() {
   const location = useLocation();
-  const [width] = useWidth();
+  const width = useWidth();
   const element = useRoutes(
     [
       {
