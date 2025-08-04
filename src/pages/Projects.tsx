@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useWidth } from "../components/useWidth";
 const projects = [
   {
     id: 1,
@@ -23,6 +24,8 @@ const projects = [
 ];
 
 const Projects = () => {
+  const width = useWidth();
+
   return (
     <div>
       <h1 className="text-2xl font-bold flex justify-center items-center p-4">
@@ -32,11 +35,13 @@ const Projects = () => {
         {projects.map((projects, index) => {
           return (
             <motion.div
+              viewport={{ once: true }}
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={width < 768 ? {} : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.4,
-                delay: index * 0.2,
+
                 scale: { duration: 0.3, type: "spring" },
               }}
               whileHover={{ scale: 1.05 }}

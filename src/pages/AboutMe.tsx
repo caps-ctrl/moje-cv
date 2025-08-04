@@ -1,7 +1,6 @@
 import SpiningLogoChange from "../components/SpiningLogoChange";
-import { useWidth } from "../components/useWidth";
+
 const AboutMe = () => {
-  const width = useWidth();
   return (
     <div>
       <h1 className="text-3xl font-bold flex justify-center items-center">
@@ -21,7 +20,7 @@ const AboutMe = () => {
           bez formalnych certyfikatów czy papierów. To zmotywowało mnie do
           działania.
         </p>
-        <p className="p-4 text-2xl">
+        <p className="p-4 text-2xl hidden md:flex">
           Codziennie uczę się czegoś nowego, tworzę projekty i rozwijam się, by
           w przyszłości zostać pełnoprawnym programistą, który tworzy
           wartościowe i funkcjonalne aplikacje.
@@ -67,13 +66,7 @@ const AboutMe = () => {
               </ol>
             </div>
           </div>
-          <div
-            className={
-              width < 768
-                ? "hidden"
-                : "w-[40%] flex justify-center items-center"
-            }
-          >
+          <div className="hidden md:flex">
             <SpiningLogoChange></SpiningLogoChange>
           </div>
         </div>

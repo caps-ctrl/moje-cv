@@ -2,12 +2,12 @@ const MobileHome = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold text-center p-4 ">
-        Jestem Marcel. Tworze nowoczesne aplikacje webowe
+        Jestem Marcel. Tworze aplikacje webowe
       </h1>
       <div className={"flex justify-evenly items-center  border-gray-400"}>
         <div
           className={
-            "w-[80%] flex flex-col text-center  gap-y-6 text-xl  font-['fira sanss'] font-bold text-gray-800  "
+            "w-[90%] flex  text-center  gap-y-6 text-xl  font-['fira sanss'] font-bold text-gray-800  "
           }
         >
           <div className={"flex flex-col gap-y-4  dark:text-gray-100"}>
