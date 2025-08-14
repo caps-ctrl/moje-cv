@@ -27,7 +27,7 @@ const Projects = () => {
                 scale: { duration: 0.3, type: "spring" },
               }}
               whileHover={{ scale: 1.05 }}
-              className="border-2 rounded-2xl shadow hover:shadow-lg h-80 cursor-pointer overflow-hidden relative z-10 bg-zinc-900"
+              className="border-2 rounded-2xl shadow hover:shadow-lg h-80 cursor-pointer overflow-hidden relative z-10 bg-zinc-300 dark:bg-zinc-900"
               onClick={() => setIsActive(index)}
             >
               <img
@@ -48,9 +48,9 @@ const Projects = () => {
                   : { opacity: 0, y: -40 }
               }
               transition={{ duration: 0.4 }}
-              className="absolute top-[200px] left-0 w-full h-[145px] bg-red border rounded-2xl z-0 bg-zinc-900"
+              className="absolute top-[200px] left-0 w-full h-[145px] bg-red border rounded-2xl z-0  bg-zinc-300 dark:bg-zinc-900"
             >
-              <div className="mt-[20px]  text-center text-sm md:text-base text-gray-300">
+              <div className="mt-[20px]  text-center text-sm md:text-base dark:text-gray-300">
                 <p>{project.description}</p>
                 <a href={project.link} target="_blank">
                   <button className="px-6 py-2 bg-blue-800 text-white rounded-lg shadow hover:bg-blue-900 active:scale-95 cursor-pointer">
