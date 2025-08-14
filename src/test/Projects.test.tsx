@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import Projects, { projects } from "../pages/Projects";
+import Projects from "../pages/Projects";
 import "@testing-library/jest-dom";
+import { projects } from "../data/ProjectsNotPage";
 
 vi.mock("../components/useWidth", () => ({
   useWidth: () => 1024,
