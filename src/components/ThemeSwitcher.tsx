@@ -36,7 +36,7 @@ export function ThemeSwitcher() {
         }}
         className=" h-[32%]  overflow-hidden z-1 flex items-center justify-center dark:bg-slate-800 cursor-pointer dark:hover:bg-slate-700  bg-white  hover:bg-stone-500"
         initial={{ opacity: 0 }}
-        animate={opened ? { x: 0, opacity: 1 } : {}}
+        animate={opened ? { opacity: 1 } : { opacity: 0 }}
         transition={{
           duration: 0.1,
         }}
@@ -50,7 +50,7 @@ export function ThemeSwitcher() {
         }}
         className=" h-[32%]  overflow-hidden z-1 flex items-center justify-center  dark:bg-slate-900 cursor-pointer dark:hover:bg-gray-700  bg-stone-300 hover:bg-stone-500"
         initial={{ opacity: 0 }}
-        animate={opened ? { x: 0, opacity: 1 } : {}}
+        animate={opened ? { opacity: 1 } : { opacity: 0 }}
         transition={{
           duration: 0.1,
         }}
@@ -64,7 +64,7 @@ export function ThemeSwitcher() {
         }}
         className=" h-[32%]  overflow-hidden z-1 flex items-center justify-center dark:bg-slate-800 cursor-pointer dark:hover:bg-slate-700  bg-white hover:bg-stone-500"
         initial={{ opacity: 0 }}
-        animate={opened ? { x: 0, opacity: 1 } : {}}
+        animate={opened ? { opacity: 1 } : { opacity: 0 }}
         transition={{
           duration: 0.1,
         }}

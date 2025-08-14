@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   const [sent, setSent] = useState(false);
@@ -56,22 +56,13 @@ const Contact = () => {
       </form>
       <div className="flex gap-8 mt-8 text-3xl">
         <a
-          href="https://github.com/twoj-github"
+          href="https://github.com/caps-ctrl"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-green-600 transition"
           title="GitHub"
         >
           <FaGithub />
-        </a>
-        <a
-          href="https://linkedin.com/in/twoj-linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-green-600 transition"
-          title="LinkedIn"
-        >
-          <FaLinkedin />
         </a>
       </div>
     </div>
