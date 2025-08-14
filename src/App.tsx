@@ -112,10 +112,10 @@ const App = () => {
 
     const getColor = () => {
       if (theme === "light") return "#ffffff";
-      if (theme === "dark") return "#1a1a1a";
+      if (theme === "dark") return "#111827";
       if (theme === "system") {
         return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "#1a1a1a"
+          ? "#111827"
           : "#ffffff";
       }
     };
@@ -125,7 +125,7 @@ const App = () => {
       if (theme === "system") {
         metaThemeColor.setAttribute(
           "content",
-          e.matches ? "#1a1a1a" : "#ffffff"
+          e.matches ? "#111827" : "#ffffff"
         );
       }
     };
