@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrowserRouter, useLocation, useRoutes } from "react-router-dom";
+import { useWidth } from "./hooks/useWidth";
+import { Helmet } from "@dr.pogodin/react-helmet";
+import { useTheme } from "./hooks/useTheme";
+
 const Home = React.lazy(() => import("./pages/Home"));
 const AboutMe = React.lazy(() => import("./pages/AboutMe"));
 const Skills = React.lazy(() => import("./pages/Skills"));
@@ -9,7 +13,6 @@ const Contact = React.lazy(() => import("./pages/Contact"));
 const RootLayout = React.lazy(() => import("./Layout/RootLayout"));
 const NotFound = React.lazy(() => import("./components/NotFound"));
 const MobileHome = React.lazy(() => import("./pages/MobileHome"));
-import { useWidth } from "./components/useWidth";
 
 function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -97,8 +100,67 @@ function AnimatedRoutes() {
 }
 
 const App = () => {
+  const { theme } = useTheme();
+  useEffect(() => {
+    const metaThemeColor =
+      document.querySelector("meta[name=theme-color]") ||
+      Object.assign(document.createElement("meta"), { name: "theme-color" });
+
+    if (!document.head.contains(metaThemeColor)) {
+      document.head.appendChild(metaThemeColor);
+    }
+
+    const getColor = () => {
+      if (theme === "light") return "#ffffff";
+      if (theme === "dark") return "#1a1a1a";
+      if (theme === "system") {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "#1a1a1a"
+          : "#ffffff";
+      }
+    };
+
+    metaThemeColor.setAttribute("content", getColor() ?? "#fff");
+    const listener = (e: MediaQueryListEvent) => {
+      if (theme === "system") {
+        metaThemeColor.setAttribute(
+          "content",
+          e.matches ? "#1a1a1a" : "#ffffff"
+        );
+      }
+    };
+
+    const media = matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [theme]);
+
   return (
     <BrowserRouter>
+      <Helmet>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Moje Portfolio</title>
+        <meta name="author" content="Marcel" />
+        <meta
+          name="description"
+          content="Portfolio pokazujące moje projekty React"
+        />
+        <meta property="og:title" content="Moje Portfolio – Projekty" />
+        <meta
+          property="og:description"
+          content="Zbiór moich projektów React i JavaScript."
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:title" content="Moje Portfolio – Projekty" />
+        <meta
+          name="twitter:description"
+          content="Zbiór moich projektów React i JavaScript."
+        />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:site" content="@TwojTwitter" />
+      </Helmet>
       <AnimatedRoutes />
     </BrowserRouter>
   );

@@ -1,4 +1,4 @@
-import { useTheme } from "./useTheme";
+import { useTheme } from "../hooks/useTheme";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AlignJustify } from "lucide-react";
@@ -41,7 +41,7 @@ export function ThemeSwitcher() {
           duration: 0.1,
         }}
       >
-        Jasny ☀️
+        Jasny
       </motion.div>
       <motion.div
         onClick={() => {
@@ -55,7 +55,7 @@ export function ThemeSwitcher() {
           duration: 0.1,
         }}
       >
-        Ciemny 🌙
+        Ciemny
       </motion.div>
       <motion.div
         onClick={() => {
@@ -69,7 +69,7 @@ export function ThemeSwitcher() {
           duration: 0.1,
         }}
       >
-        Systemowy🖥️
+        Systemowy
       </motion.div>
     </motion.button>
   );

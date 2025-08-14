@@ -1,26 +1,6 @@
 import { useEffect, useState } from "react";
+import { TEXT } from "../data/Text";
 
-const TEXT = [
-  "<div>Duży div</div>",
-  "<button onClick={naprawBuga}>Napraw mnie</button>",
-  "<input type='text' placeholder='Twoja dusza tu...' />",
-  "<h1>Hello darkness, my old bug</h1>",
-  "<p>Ten kod nie jest komentowany, tylko zaklęty</p>",
-  "<form>Wyślij do nikąd</form>",
-  "<code>100% działa. Prawie.</code>",
-  "<nav>Gdzie ja jestem?</nav>",
-  "<section>Przestrzeń na błędy</section>",
-  "<footer>Stworzono o 3:00 nad ranem</footer>",
-  "<article>To nie bug, to feature</article>",
-  "<aside>To miał być tylko test</aside>",
-  "<span>Nie klikaj tu...</span>",
-  "<main>Błędy główne</main>",
-  "<pre>To jest tak brzydki kod, że aż ładny</pre>",
-  "<script>alert('Debug time')</script>",
-  "<label>Junior z sercem seniorskiego debugowania</label>",
-  "<textarea>Ctrl + Z... Ctrl + Z...</textarea>",
-  "<header>// Po co mi testy, skoro działa?</header>",
-];
 const WritingText = () => {
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -35,17 +15,17 @@ const WritingText = () => {
         timeout = setTimeout(() => {
           setDisplayed(TEXT[textIndex].slice(0, index + 1));
           setIndex(index + 1);
-        }, time / 2); // czas pisania
+        }, time / 2);
       } else if (!isDeleting && index === TEXT[textIndex].length) {
-        timeout = setTimeout(() => setIsDeleting(true), stop); // pauza po napisaniu
+        timeout = setTimeout(() => setIsDeleting(true), stop);
       } else if (isDeleting && index > 0) {
         timeout = setTimeout(() => {
           setDisplayed(TEXT[textIndex].slice(0, index - 1));
           setIndex(index - 1);
-        }, time / 3); // czas usuwania
+        }, time / 3);
       } else if (index === 0 && isDeleting) {
         timeout = setTimeout(() => setIsDeleting(false), stop);
-        setTextIndex(() => Math.floor(Math.random() * TEXT.length)); // pauza po usunięciu
+        setTextIndex(() => Math.floor(Math.random() * TEXT.length));
       }
 
       return () => clearTimeout(timeout);

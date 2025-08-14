@@ -14,10 +14,10 @@ const NavBar = () => {
           <ul className="flex space-x-4 text-sm md:text-xl p-4 rounded-4xl shadow-[0_0px_10px_rgba(0,0,0,1)] dark:shadow-[0_0px_10px_rgba(0,0,0,1)] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100  ">
             {" "}
             <li>
-              <NavLink to={"/Projects"}>Projects</NavLink>
+              <NavLink to={"/"}>Home</NavLink>
             </li>{" "}
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <NavLink to={"/Projects"}>Projects</NavLink>
             </li>{" "}
             <li>
               <NavLink to={"/AboutMe"}>About me</NavLink>
