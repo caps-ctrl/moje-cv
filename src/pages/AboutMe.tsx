@@ -2,6 +2,7 @@ import SpiningLogoChange from "../components/SpiningLogoChange";
 
 const AboutMe = () => {
   return (
+    
     <div>
       <h1 className="text-3xl font-bold flex justify-center items-center">
         O mnie

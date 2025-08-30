@@ -138,28 +138,33 @@ const App = () => {
   return (
     <BrowserRouter>
       <Helmet>
+        {/* Podstawowe informacje */}
+        <html lang="pl" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Moje Portfolio</title>
+        <title>Portfolio Marcel – React Developer</title>
         <meta name="author" content="Marcel" />
         <meta
           name="description"
-          content="Portfolio pokazujące moje projekty React"
+          content="Portfolio Marcela – Junior React Developer. Nowoczesne aplikacje webowe w React, TypeScript, TailwindCSS i Framer Motion."
         />
-        <meta property="og:title" content="Moje Portfolio – Projekty" />
         <meta
-          property="og:description"
-          content="Zbiór moich projektów React i JavaScript."
+          name="keywords"
+          content="React, TypeScript, TailwindCSS, Framer Motion, Frontend Developer, Portfolio"
         />
-        <meta property="og:type" content="website" />
+        <link rel="canonical" href="" />
 
-        <meta name="twitter:title" content="Moje Portfolio – Projekty" />
+        {/* Kolor motywu – jasny i ciemny */}
         <meta
-          name="twitter:description"
-          content="Zbiór moich projektów React i JavaScript."
+          name="theme-color"
+          content="#ffffff"
+          media="(prefers-color-scheme: light)"
         />
-        <meta name="twitter:image" content="/og-image.png" />
-        <meta name="twitter:site" content="@TwojTwitter" />
+        <meta
+          name="theme-color"
+          content="#111827"
+          media="(prefers-color-scheme: dark)"
+        />
       </Helmet>
       <AnimatedRoutes />
     </BrowserRouter>

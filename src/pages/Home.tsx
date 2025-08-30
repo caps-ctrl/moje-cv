@@ -1,6 +1,7 @@
 import WritingText from "../components/WritingText";
 
 const Home = () => {
+  
   return (
     <div>
       <h1 className="text-5xl font-bold text-center p-10  ">

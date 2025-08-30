@@ -24,7 +24,6 @@ vi.mock("framer-motion", async () => {
 describe("ThemeSwitcher", () => {
   it("should display three options of theme", () => {
     render(<ThemeSwitcher />);
-    screen.debug();
 
     const themes = ["Jasny", "Ciemny", "Systemowy"];
     themes.forEach((theme) => {
