@@ -22,12 +22,12 @@ describe("Projects", () => {
   it("should display all projects", () => {
     render(<Projects />);
     screen.debug();
-    expect(screen.getAllByRole("img").length).toBe(projects.length);
+    expect(screen.getAllByRole("img").length).toBe(projects.Projects.length);
   });
   it("should display correct title fo each Project", async () => {
     render(<Projects />);
 
-    for (const project of projects) {
+    for (const project of projects.Projects) {
       const el = await screen.findByText(project.title);
       expect(el).toBeInTheDocument();
     }

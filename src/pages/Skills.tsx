@@ -1,81 +1,64 @@
 import { FaReact, FaGithub, FaMobileAlt } from "react-icons/fa";
 import { SiRedux, SiTypescript, SiReactrouter } from "react-icons/si";
 import { motion } from "framer-motion";
+import { skillsData } from "../data/SkillData";
+
+const icons = [
+  <FaMobileAlt className="text-5xl text-green-500" title="Responsywność" />,
+  <FaReact className="text-5xl text-cyan-400 animate-spin" title="React" />,
+  <SiRedux className="text-5xl text-purple-500" title="Redux" />,
+  <SiTypescript className="text-5xl text-blue-600" title="TypeScript" />,
+  <SiReactrouter className="text-5xl text-red-500" title="React Router" />,
+  <FaGithub
+    className="text-5xl text-gray-800 dark:text-gray-200"
+    title="GitHub"
+  />,
+];
 
 const Skills = () => {
-  const icons = [
-    <FaMobileAlt className="text-5xl text-green-500" title="Responsywność" />,
-    <FaReact className="text-5xl text-cyan-400 animate-spin" title="React" />,
-    <SiRedux className="text-5xl text-purple-500" title="Redux" />,
-    <SiTypescript className="text-5xl text-blue-600" title="TypeScript" />,
-    <SiReactrouter className="text-5xl text-red-500" title="React Router" />,
-    <FaGithub
-      className="text-5xl text-gray-800 dark:text-gray-200"
-      title="GitHub"
-    />,
-  ];
   return (
-    <div>
-      <h1 className="text-4xl text-center font-semibold p-4">Skills</h1>
-      <div className="flex flex-col items-center">
-        <div className="flex flex-wrap justify-center gap-4 p-4">
-          {icons.map((icon, index) => {
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="m-2"
-              >
-                {icon}
-              </motion.div>
-            );
-          })}
-        </div>
-        <p className="text-lg text-gray-700 dark:text-gray-300 p-4">
-          Technologie, z którymi pracuję na co dzień to:
-        </p>
-        <ul className="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 p-4">
-          <li className="font-bold text-2xl ">Responsywność i RWD</li>
-          <p className="mb-5">
-            dbam o to, aby moje aplikacje działały dobrze na każdej wielkości
-            ekranu.
-          </p>
-          <li className="font-bold text-2xl ">React </li>
-          <p className="mb-5">
-            moja główna biblioteka do tworzenia aplikacji frontendowych. Znam
-            JSX, komponenty funkcyjne, propsy, hooki.
-          </p>
-          <li className="font-bold text-2xl ">TypeScript </li>
-          <p className="mb-5">
-            używam go w projektach Reactowych, co pozwala mi pisać bardziej
-            niezawodny i przewidywalny kod.
-          </p>
-          <li className="font-bold text-2xl ">React Router</li>
-          <p className="mb-5">
-            wykorzystuję do budowy aplikacji SPA i zarządzania trasami.
-          </p>
-          <li className="font-bold text-2xl ">Git i GitHub</li>
-          <p className="mb-5">
-            korzystam z Gita do wersjonowania kodu, a GitHuba do hostowania
-            projektów i współpracy.
-          </p>
-          <li className="font-bold text-2xl ">Framer Motion</li>
-          <p className="mb-5">
-            Korzystam z tej biblioteki do animacji w React, aby dodawać płynne i
-            nowoczesne efekty przejść i interakcji.
-          </p>
-          <li className="font-bold text-2xl ">Praca zespołowa i feedback</li>
-          <p className="mb-5">
-            Nie boję się prosić o pomoc, dzielić wiedzą ani przyjmować
-            konstruktywnego feedbacku – to naturalna część rozwoju.
-          </p>
-        </ul>
+    <section className="max-w-6xl mx-auto px-4 py-10 caret-transparent">
+      <h1 className="text-4xl font-bold text-center mb-8">💻 Skills</h1>
+
+      {/* Ikony */}
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
+        {icons.map((icon, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            className="p-4 rounded-2xl shadow-lg bg-white dark:bg-gray-800"
+          >
+            {icon}
+          </motion.div>
+        ))}
       </div>
-    </div>
+
+      {/* Lista umiejętności */}
+      <p className="text-lg text-gray-700 dark:text-gray-300 text-center mb-8">
+        Technologie, z którymi pracuję na co dzień:
+      </p>
+      <div className="grid md:grid-cols-2 gap-6">
+        {skillsData.map((skill, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            className="p-6 rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+          >
+            <h2 className="text-2xl font-bold mb-2">{skill.title}</h2>
+            <p className="text-gray-700 dark:text-gray-300">
+              {skill.description}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
 
 export default Skills;
-// filepath: c:\Users\marcel\Projects\myCV\src\pages\Skills.tsx

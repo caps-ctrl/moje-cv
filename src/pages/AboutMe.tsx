@@ -2,7 +2,6 @@ import SpiningLogoChange from "../components/SpiningLogoChange";
 
 const AboutMe = () => {
   return (
-    
     <div>
       <h1 className="text-3xl font-bold flex justify-center items-center">
         O mnie
@@ -61,7 +60,7 @@ const AboutMe = () => {
                 </li>
                 <li className="ml-6">
                   <span className="absolute flex items-center justify-center w-6 h-6 bg-green-400 rounded-full  -left-3 ring-8 dark:ring-white  ring-gray-500"></span>
-                  <h3 className="font-bold text-lg">2025.07.24</h3>
+                  <h3 className="font-bold text-lg">2025.07.14</h3>
                   <p>Rozwijanie portfolio, nauka Reduxa i Framer Motion</p>
                 </li>
               </ol>

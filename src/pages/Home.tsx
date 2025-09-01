@@ -1,7 +1,6 @@
 import WritingText from "../components/WritingText";
 
 const Home = () => {
-  
   return (
     <div>
       <h1 className="text-5xl font-bold text-center p-10  ">
@@ -55,7 +54,7 @@ const Home = () => {
           </svg>
           {/* Przycisk pobierania CV */}
           <a
-            href="/cv.pdf"
+            href="Marcel_Gusiew_CV.pdf"
             download
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
           >
